@@ -2,7 +2,7 @@
 layout: post
 title: switch-case
 ---
-switch-case문
+### switch-case문
 
 var message = 1  
 switch message {  
@@ -12,7 +12,7 @@ switch message {
     default: print(":)")  
 } //Hello  
 
-switch-case문 결합
+### switch-case문 결합
 
 var value = 2  
 switch(value) {  
@@ -21,7 +21,7 @@ switch(value) {
     default:print("10이하의 정수를 입력해주세요.")   
 } //홀수입니다.  
 
-switch-case문 범위 지정 매칭
+### switch-case문 범위 지정 매칭
 
 let alphabet: Character = "K"  
 switch(alphabet) {  
@@ -30,7 +30,7 @@ switch(alphabet) {
     default:print("알파벳을 입력해주세요.")   
 } //대문자입니다.  
 
-switch-case에서 where절 사용   
+### switch-case에서 where절 사용   
 var number = 3   
 switch (number) {  
     case 0...9 where number % 2 == 1: print("한자리수 홀수")  
@@ -40,7 +40,7 @@ switch (number) {
     default:print("99까지의 정수를 입력해주세요.")   
 } //한자리수 홀수  
 
-fallthrough
+### fallthrough
 
 var value = 3   
 switch (value) {  

@@ -41,4 +41,5 @@ func SumFunc() -> (Int, Int) -> Int {
     return sum  
 }  
 print(SumFunc()(12,8)) //20 
-``` 
+```    
+__출처 : 'iOS프로그래밍기초(21-2학기)한성현교수님 강의 내용 변형 및 요약'__    

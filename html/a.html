@@ -1,0 +1,31 @@
+<!DOCTYPE html> 							
+<html>		
+<head>
+    <meta charset="utf-8">
+    <h1>전원생활</h1>
+    <style>
+        ul li {list-style-type: square;}
+        body {font:17px "Arial"; margin:25px; background-color:darkgrey;}
+        h1 {font-size: 20pt; color:rgb(34, 4, 20); background-color:gray;} 
+    </style>
+</head>	
+<ul>			
+    <li>
+        <p>선호하는 도시를 선택해 보세요</p>
+        도시 : <select id="myCity">
+            <option value="0">서울</option>
+            <option value="1">경기</option>
+            <option value="2">강원</option>
+            <option value="3">부산</option>
+        </select>
+
+        <button type="button" onClick="display();">출력하기</button>
+    	<button type="button" onClick="erase();">지우기</button>
+
+        <div id="content"></div>
+
+    <script type="text/javascript" src="pilot.js"></script> 
+    </li>
+</ul>                                    
+</html>	
+

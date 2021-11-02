@@ -61,22 +61,24 @@
  * 현재일자 가져오기. [yyyy.mm.dd hh:mm:ss]
  * @param {*} None
  */
+   
   function getDisplayDate()
   {
+    try {
+      var d = new Date();
+      var year = d.getFullYear();
+      var mm = ((d.getMonth()+1) > 9) ? d.getMonth()+1 : "0" + d.getMonth()+1; 
+      var dd = (d.getDate() > 9) ? d.getDate() : "0" + d.getDate();
 
-    var d = new Date();
-    var year = d.getFullYear();
-    var mm = ((d.getMonth()+1) > 9) ? d.getMonth()+1 : "0" + d.getMonth()+1; 
-    var dd = (d.getDate() > 9) ? d.getDate() : "0" + d.getDate();
+      var hh = (d.getHours() > 9) ? d.getHours() : "0" + d.getHours();
+      var mi = (d.getMinutes() > 9) ? d.getMinutes() : "0" + d.getMinutes();
+      var sec = (d.getSeconds() > 9) ? d.getSeconds() : "0" + d.getSeconds();
 
-    var hh = (d.getHours() > 9) ? d.getHours() : "0" + d.getHours();
-    var mi = (d.getMinutes() > 9) ? d.getMinutes() : "0" + d.getMinutes();
-    var sec = (d.getSeconds() > 9) ? d.getSeconds() : "0" + d.getSeconds();
-
-    var retDate = year + "." + mm + "." + dd + " " + hh + ":" + mi + ":" + sec;
-
+      var retDate = year + "." + mm + "." + dd + " " + hh + ":" + mi + ":" + sec;
+    } catch(e) {
+      console.log(e);
+    }
     return retDate;
-
   }
 
 /**

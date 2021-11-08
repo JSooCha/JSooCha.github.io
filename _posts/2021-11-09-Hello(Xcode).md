@@ -7,9 +7,9 @@ title: Hello(Xcode)
 - Bundle Identifier(번들 ID) : 앱 식별자   
 - Deployment Info : 구동 가능한 최소 IOS 사양  
 
- ### Playground로 Swift문법과 UI테스트  
- ![123](https://user-images.githubusercontent.com/90169862/140778559-22eb91b1-47ba-4fa4-a419-19bea88abb47.JPG)    
- Automatically Run 기능으로 코드 입력이 끝났을 때 자동으로 컴파일할 수 있으며  우측 사각형 버튼을 통해 상세 결과를 볼 수 있다.   
+ ### Playground로 Swift문법과 UI테스트      
+ ![123](https://user-images.githubusercontent.com/90169862/140778559-22eb91b1-47ba-4fa4-a419-19bea88abb47.JPG)      
+ Automatically Run 기능으로 코드 입력이 끝났을 때 자동으로 컴파일할 수 있으며  우측 사각형 버튼을 통해 상세 결과를 볼 수 있다.     
  #  
  ![23](https://user-images.githubusercontent.com/90169862/140778722-80045463-aa40-481a-a12e-5df8b31d2e6d.JPG)    
  Xcode는 크게 navigator, Document Outline, Canvas, inspector 창으로 구성되며 Main.storyboard 파일에서 앱 내의 화면을 구성할 수 있다.  

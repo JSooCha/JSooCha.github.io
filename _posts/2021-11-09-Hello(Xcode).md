@@ -8,10 +8,12 @@ title: Hello(Xcode)
 - Deployment Info : 구동 가능한 최소 IOS 사양       
 ### Playground로 Swift문법과 UI테스트      
 ![123](https://user-images.githubusercontent.com/90169862/140778559-22eb91b1-47ba-4fa4-a419-19bea88abb47.JPG)      
-Automatically Run 기능으로 코드 입력이 끝났을 때 자동으로 컴파일할 수 있으며  우측 사각형 버튼을 통해 상세 결과를 볼 수 있다.     
-#  
+Automatically Run 기능으로 코드 입력이 끝났을 때 자동으로 컴파일할 수 있으며  우측 사각형 버튼을 통해 상세 결과를 볼 수 있다.  
+#
+
 ![23](https://user-images.githubusercontent.com/90169862/140778722-80045463-aa40-481a-a12e-5df8b31d2e6d.JPG)    
 Xcode는 크게 navigator, Document Outline, Canvas, inspector 창으로 구성되며 Main.storyboard 파일에서 앱 내의 화면을 구성할 수 있다.  
+
 #  
 ![12312](https://user-images.githubusercontent.com/90169862/140779019-b20364cf-3304-4803-9e35-fdf6f014d3d8.JPG)    
 스토리보드에서 다양한 오브젝트의 배치가 가능하며(shift+cmd+l) Assistant editor로(ctrl+alt+command+enter) 스토리보드와 소스를 연결하여(ctrl+클래스 내부 드래그) 아웃렛 변수와 액션 함수를 추가할 수 있다.   

@@ -4,8 +4,8 @@ title: Hello(Xcode)
 ---
 
 ## 강의 요약 및 실습화면
-- Bundle Identifier(번들 ID) : 앱 식별자   
-- Deployment Info : 구동 가능한 최소 IOS 사양       
+Bundle Identifier(번들 ID) : 앱 식별자   
+Deployment Info : 구동 가능한 최소 IOS 사양       
 
  ### Playground로 Swift문법과 UI테스트      
  ![123](https://user-images.githubusercontent.com/90169862/140778559-22eb91b1-47ba-4fa4-a419-19bea88abb47.JPG)      

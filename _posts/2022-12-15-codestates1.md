@@ -1,6 +1,11 @@
 ---
 layout: post
 title: 코드스테이츠 백엔드 1일차
+excerpt: 코드스테이츠 1일차 회고록
+categories: codestates
+tags: [codestates, CS]
+toc: true
+toc_sticky: true
 ---
 
 ### 회고

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 객체지향 프로그래밍 심화
-excerpt: 객체지향 프로그래밍의 이해
+title: 컬렉션
+excerpt: 컬렉션에 대한 이해
 categories: codestates
 tags: [codestates, Java]
 toc: true

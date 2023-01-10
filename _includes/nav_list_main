@@ -27,7 +27,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "codestates" %}
-                        <li><a href="/categories/codestates" class="">코드스테이츠 (with C++) ({{category[1].size}})</a></li>
+                        <li><a href="/categories/codestates" class="">코드스테이츠 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

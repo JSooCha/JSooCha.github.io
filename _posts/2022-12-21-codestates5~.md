@@ -1,6 +1,6 @@
 ---
-title: Java 기초
-excerpt: Java 기초 문법
+title: Java
+excerpt: Java에 대해
 categories: codestates
 tags: [codestates, Java]
 toc: true
@@ -9,7 +9,7 @@ author_profile: true
 sidebar_main: true
 ---
 
-## Java
+## 특징
 <hr>
 
 - 객체지향 프로그래밍(Object Oriented Programming, OOP) 언어      
@@ -22,5 +22,7 @@ sidebar_main: true
     - 람다식, 스트림
 - 자동 메모리 관리
     - Garbage Collection
+
+## JVM(Java Virtual Machine)
 
 

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Git
 excerpt: Git의 이해
 categories: codestates

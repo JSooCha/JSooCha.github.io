@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hello(Xcode)
 author_profile: true
 sidebar_main: true

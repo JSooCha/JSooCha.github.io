@@ -1,5 +1,4 @@
 ---
-layout: post
 title: CLI
 excerpt: CLI의 이해
 categories: codestates

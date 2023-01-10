@@ -1,6 +1,8 @@
 ---
 layout: post
 title: inheritance
+author_profile: true
+sidebar_main: true
 ---
 ## 상속
 ```swift

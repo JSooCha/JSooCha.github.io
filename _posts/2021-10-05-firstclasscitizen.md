@@ -1,6 +1,8 @@
 ---
 layout: post
 title: first-class citizen
+author_profile: true
+sidebar_main: true
 ---
 ## **1급 객체**
 ### 함수를 변수에 저장 가능  

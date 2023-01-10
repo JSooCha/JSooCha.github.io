@@ -1,6 +1,8 @@
 ---
 layout: post
 title: icon, launchScreen, tag
+author_profile: true
+sidebar_main: true
 ---
 
 ## 강의 요약 및 실습화면  

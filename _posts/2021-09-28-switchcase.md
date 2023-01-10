@@ -1,6 +1,8 @@
 ---
 layout: post
 title: switch-case
+author_profile: true
+sidebar_main: true
 ---
 switch-case문
 

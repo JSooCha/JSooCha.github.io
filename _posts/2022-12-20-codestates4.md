@@ -1,7 +1,7 @@
 ---
 title: Git
 excerpt: Git의 이해
-categories: codestates
+categories: Git
 tags: [codestates, Git]
 toc: true
 toc_sticky: true

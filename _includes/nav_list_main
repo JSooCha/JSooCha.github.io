@@ -23,6 +23,30 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        <span class="nav__sub-title">CS</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "cs" %}
+                        <li><a href="/categories/cs" class="">CS ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">HTML</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "HTML" %}
+                        <li><a href="/categories/HTML" class="">HTML ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Git</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Git" %}
+                        <li><a href="/categories/Git" class="">Git ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <span class="nav__sub-title">코드스테이츠</span>
             <ul>
                 {% for category in site.categories %}

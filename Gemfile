@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "minimal-mistakes-jekyll"
 gem "github-pages", group: :jekyll_plugins
 
 gem "tzinfo-data"
@@ -17,4 +18,3 @@ group :jekyll_plugins do
 end
 
 gem "webrick", "~> 1.7"
-gem "minimal-mistakes-jekyll"

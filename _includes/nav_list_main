@@ -23,7 +23,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">코드스테이츠</span>
+        <span class="nav__sub-title">iOS</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "iOS" %}

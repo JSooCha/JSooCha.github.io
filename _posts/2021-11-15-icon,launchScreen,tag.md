@@ -2,6 +2,7 @@
 title: icon, launchScreen, tag
 author_profile: true
 sidebar_main: true
+categories: iOS
 ---
 
 ## 강의 요약 및 실습화면  

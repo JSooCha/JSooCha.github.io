@@ -2,6 +2,7 @@
 title: switch-case
 author_profile: true
 sidebar_main: true
+categories: iOS
 ---
 switch-case문
 

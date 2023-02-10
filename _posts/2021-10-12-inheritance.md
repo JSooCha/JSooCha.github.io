@@ -2,6 +2,7 @@
 title: inheritance
 author_profile: true
 sidebar_main: true
+categories: iOS
 ---
 ## 상속
 ```swift

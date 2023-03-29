@@ -1,0 +1,162 @@
+---
+title: 서버 배포
+excerpt: 서버 배포
+categories: Spring
+tags: [codestates, Spring]
+toc: true
+toc_sticky: true
+author_profile: true
+sidebar_main: true
+published : false
+---
+# 서버 배포 (EC2)
+- EC2 콘솔을 통해 EC2 인스턴스에 연결
+- 간단한 서버 애플리케이션을 생성 및 EC2 인스턴스에 코드 배포
+- 서버를 실행시키고 브라우저에서 서버에 접속
+
+## EC2 Instance 연결
+- 인스턴스 탭에서 연결하고자 하는 인스턴스 선택 후 연결 
+- Session Manager 로 연결 시 터미널이 열림
+- bash 쉘로 변경
+   ```
+   $ bash
+   ```
+- 홈 디렉토리로 이동
+   ```
+   $ cd ~
+   ```
+
+## 인스턴스 관리
+### [인스턴스 상태 ▼]
+- 인스턴스 중지 (Stop instance) : 인스턴스 종료
+- 인스턴스 시작 (Start instance) : 인스턴스 실행(running)
+  - 주황색 [인스턴스 시작] 버튼은 Launch instances로 인스턴스 생성과 같음
+- 인스턴스 재부팅 (Reboot instance) : 인스턴스 재부팅
+- 인스턴스 최대 절전 모드 (Hibernate instance) : Amazon Linux와 특정 이미지의 인스턴스에서 지원하는 수면모드
+- 인스턴스 종료 (Terminate instance) : 인스턴스 삭제
+
+## EC2 인스턴스 상에서 서버 실행
+### 개발 환경 구축
+- 패키지 정보 업데이트
+  ```
+  $ sudo apt update
+  ```
+- java 설치
+  ```
+  $ sudo apt install openjdk-11-jre-headless
+  ```
+  -  java -version 으로 설치 확인
+
+### 실습 코드 클론
+- SSH등록
+  - SSH 등록 참고
+- 실습 코드 클론
+  ```
+  git clone [SSH 주소]
+  ```
+  - 클론 진행 여부에 대해 yes 입력
+- 빌드 
+  ```
+  cd be-sprint-deployment/DeployServer
+  ```
+  ```
+  ./gradlew build
+  ```
+
+### EC2 인스턴스에서 서버 실행
+- 빌드 된 파일 실행
+  ```
+  java -jar build/libs/DeployServer-0.0.1-SNAPSHOT.jar
+  ```
+- EC2 인스턴스의 IP 주소로 접근하여 테스트 진행
+  - IP 주소는 EC2 대시보드에서 생성한 EC2 인스턴스를 클릭하면 확인 가능
+    - 퍼블릭 IPv4 주소와 퍼블릭 IPv4 DNS는 형태만 다를 뿐 같은 주소
+    - 둘 중 어떤 주소를 사용해도 됨
+  ```
+  {퍼블릭 IPv4 DNS or 퍼블릭 IPv4 주소}:8080
+  ```
+  - 보안 그룹이 설정되어있기 때문에 에러 없이 접근 가능
+
+- 위와 같은 방법으로 빌드 파일을 실행하는 경우 터미널에서 실시간으로 요청과 응답에 대한 Log를 볼 수 있음
+- 하지만 동시에 다른 작업을 해야하는 경우라던지 터미널을 종료해야하는 경우엔 위의 빌드 파일을 백그라운드에서 실행해야 함
+  ```
+  nohup java –jar build/libs/DeployServer-0.0.1-SNAPSHOT.jar
+  ```
+  - 실행중인 프로세스 조회 
+  ```
+  ps -ef | grep java
+  ```
+
+### 보안 그룹(Security Group)
+- 인스턴스로 들어가고 인스턴스에서 나가는 트래픽에 대한 가상 방화벽
+  - 인바운드 : 인스턴스로 들어가는 트래픽
+  - 아웃바운드 : 인스턴스에서 나가는 트래픽
+
+#### 인바운드규칙
+- EC2 인스턴스로 들어오는 트래픽에 대한 규칙
+  - EC2 인스턴스를 생성하면 기본적으로 SSH 접속을 위한 SSH 규칙만 생성
+- 인바운드 규칙에 허용되지 않은 규칙은 인스턴스로 접근하지 못하도록 필터링 
+
+#### 아웃바운드 규칙
+- EC2 인스턴스에서 나가는 트래픽에 대한 규칙
+  - EC2 인스턴스를 생성하면 기본적으로 나가는 모든 트래픽 허용
+
+### 보안 그룹 설정
+- 인스턴스 탭의 우측에서 해당 인스턴스가 어떤 보안그룹에 속해 있는지 확인 가능
+- 보안 그룹 탭에서 인스턴스 탭에서 확인한 보안그룹을 클릭하면 해당 보안그룹의 규칙을 설정 가능
+
+#### 인바운드 규칙 설정
+- 인바운드 규칙은 필요에 따라 규칙을 추가하고 제거하는 과정이 자유로움
+- 보안 그룹 탭의 인바운드 규칙 - 인바운드 규칙 편집 - 규칙 추가
+- EC2 인스턴스에서 실행중인 서버가 인터넷에서 요청을 받을수 있도록 인바운드 규칙 설정
+  - 인바운드 유형과 이때 허락하는 포트의 범위 지정
+  - 소스는 특정 보안그룹 일수도, 특정 IP주소 일수도 혹은 둘 다 아닐 수도 있음
+    - 보안그룹은 소스에 따라 인바운드/아웃바운드 요청을 허락하거나 거절할 수 있음
+
+### Shell Script
+- 애플리케이션을 background에서 실행하고, 정상 작동을 하고 있는지 체크를 하기 위한 작업을 편하게 하기 위한 실행 스크립트
+- 셀이나 명령 중 인터프리터에서 돌아가도록 작성된 스크립트 
+  - 운영체제를 위한 스크립트
+- 한번 작성하면 재작성 하는 일이 매우 적음
+  - 여러 경우의 스크립트를 모아두어 때에 따라 사용
+
+#### Spring Boot 백 그라운드 실행
+- 실행 스크립트 생성
+  ```
+  nano restart.sh
+  ```
+- 명령 입력
+  ```
+  #!/bin/bash
+
+  # DeployServer-0.0.1-SNAPSHOT.jar가 실행중이라면 프로세스 종료
+  ps -ef | grep "DeployServer-0.0.1-SNAPSHOT.jar" | grep -v grep | awk '{print $2}' | xargs kill -9 2> /dev/null
+
+  # 종료 이력을 파악하여 적절한 문구 출력
+  if [ $? -eq 0 ];then
+      echo "my-application Stop Success"
+  else
+      echo "my-application Not Running"
+  fi
+
+  # DeployServer-0.0.1-SNAPSHOT.jar를 다시 실행하기 위한 과정 진행
+  echo "my-application Restart!"
+  echo $1
+
+  # nohup 명령어를 통해 백그라운드에서 DeployServer-0.0.1-SNAPSHOT.jar 실행
+  nohup java -jar build/libs/DeployServer-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev > /dev/null 2>&1 &
+  ```
+  - 단순히 셸 스크립트를 실행했을 때 위의 진행 과정에 추가로 프로젝트 재 빌드까지 이뤄지게 하려면?
+- 실행 권한 부여
+  ```
+  chmod 755 restart.sh
+  ```
+- 실행
+  ```
+  ./restart.sh
+  ```
+  - 권한 거부 시 sudo 사용
+    
+
+
+

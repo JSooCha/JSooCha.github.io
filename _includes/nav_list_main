@@ -61,16 +61,16 @@
         <span class="nav__sub-title">프로젝트</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Projects" %}
-                        <li><a href="/categories/Projects" class="">Project ({{category[1].size}})</a></li>
+                    {% if category[0] == "spring_projects" %}
+                        <li><a href="/categories/spirng_projects" class="">Spring ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
         <span class="nav__sub-title">에러 노트</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Errors" %}
-                        <li><a href="/categories/Errors" class="">Errors ({{category[1].size}})</a></li>
+                    {% if category[0] == "spring_errors" %}
+                        <li><a href="/categories/spring_errors" class="">Spring ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

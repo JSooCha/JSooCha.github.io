@@ -61,8 +61,8 @@
         <span class="nav__sub-title">프로젝트</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "spring_projects" %}
-                        <li><a href="/categories/spring_projects" class="">Spring ({{category[1].size}})</a></li>
+                    {% if category[0] == "spring_project" %}
+                        <li><a href="/categories/spring_project" class="">Spring ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -84,8 +84,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "codestates_projects" %}
-                        <li><a href="/categories/codestates_projects" class="">프로젝트 ({{category[1].size}})</a></li>
+                    {% if category[0] == "codestates_project" %}
+                        <li><a href="/categories/codestates_project" class="">프로젝트 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

@@ -1,5 +1,5 @@
 ---
-title: "코드스테이츠"
+title: "HTML"
 layout: archive
 permalink: categories/HTML
 author_profile: true

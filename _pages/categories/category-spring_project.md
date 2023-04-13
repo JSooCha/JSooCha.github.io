@@ -1,11 +1,11 @@
 ---
-title: "코드스테이츠"
+title: "스프링 프로젝트"
 layout: archive
-permalink: categories/codestates
+permalink: categories/spring_project
 author_profile: true
 sidebar_main: true
 ---
 
 
-{% assign posts = site.categories.codestates %}
+{% assign posts = site.categories.spring_project %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}

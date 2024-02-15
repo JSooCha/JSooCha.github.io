@@ -4,7 +4,7 @@ author_profile: true
 sidebar_main: true
 categories: iOS
 ---
-switch-case문
+### switch-case문
 
 ``` Swift
 var message = 1  
@@ -15,7 +15,7 @@ switch message {
     default: print(":)")  
 } //Hello  
 ```
-switch-case문 결합
+### switch-case문 결합
 
 ``` Swift
 var value = 2  
@@ -25,7 +25,7 @@ switch(value) {
     default:print("10이하의 정수를 입력해주세요.")   
 } //홀수입니다.  
 ```
-switch-case문 범위 지정 매칭
+### switch-case문 범위 지정 매칭
 
 ``` Swift
 let alphabet: Character = "K"  
@@ -36,7 +36,7 @@ switch(alphabet) {
 } //대문자입니다.  
 ```
 
-switch-case에서 where절 사용   
+### switch-case에서 where절 사용   
 
 ``` Swift
 var number = 3   
@@ -49,7 +49,7 @@ switch (number) {
 } //한자리수 홀수  
 ```
 
-fallthrough
+### fallthrough
 
 ``` Swift
 var value = 3   

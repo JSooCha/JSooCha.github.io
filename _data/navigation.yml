@@ -2,8 +2,8 @@
 main:
   - title: "Home"
     url: https://jsoocha.github.io/
-  - title: "Category"
-    url: https://jsoocha.github.io/categories/
+  - title: "About"
+    url: https://jsoocha.github.io/about/
 
 
 # 카테고리 추가시 

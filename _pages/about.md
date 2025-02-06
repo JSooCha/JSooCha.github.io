@@ -1,6 +1,5 @@
 ---
 title: "About"
-layout: archive
 permalink: /about
 toc: true
 toc_sticky: true

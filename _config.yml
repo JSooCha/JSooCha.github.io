@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: JSooCha # the main title
 
-tagline: JSooCha의 기술 블로그 # it will display as the subtitle
+tagline: JSooCha 기술 블로그 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
